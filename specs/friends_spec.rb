@@ -131,7 +131,8 @@ class TestFriends < MiniTest::Test
   # (hint2: You should test if both the lender's and the lendee's money have changed, maybe two assertions?)
 def test_lend_money
   result = lend_money(@person5, @person3, 15)
-  assert_equal([85, 35], result)
+  assert_equal([85, @person5[:monies])
+  asser_equal(35, @person3 [:monies])
 end
 
   
